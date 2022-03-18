@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+
+    <nav>
+        <button class="tablinks" onclick="changeTab(0)">All Users</button>
+        <button class="tablinks" onclick="changeTab(1)">+ Create User</button>
+    </nav>
+
+    <div>
+        <input class="search" type="text" name="search" placeholder="search">
+        <select>
+        </select>
+        
+        <ul id="userlist">
+        </ul>
+    </div>
+
+    <div>
+        <h1></h1>
+            <input type="text" id="name" name="name" placeholder="name..">
+            <input type="email" id="email" name="email" placeholder="email..">
+            <input type="street" id="street" name="street" placeholder="street..">
+            <input type="city" id="city" name="city" placeholder="city..">
+            <input type="zipcode" id="zipcode" name="zipcode" placeholder="zipcode..">
+            <input type="phone" id="phone" name="phone" placeholder="phone..">
+
+            <button class="save" onclick="saveUser()">Save</button>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>  
+   

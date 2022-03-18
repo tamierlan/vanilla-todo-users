@@ -1,0 +1,188 @@
+
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+* { box-sizing: border-box; }
+
+nav {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 10% 0 10%;
+    background-color: darkcyan;
+    position: fixed;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+nav button {
+    background-color: inherit;
+    float: right;
+    border: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+nav button:hover { background-color: cadetblue; }
+nav button.active { background-color: aqua; }
+
+div {
+    display: none;
+    padding: 70px 12px;
+} 
+
+h1 {
+    text-align: center;
+    color: cadetblue;
+}
+
+/* all todos */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 0px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    border-bottom: 1px solid gray;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#userlist li input {
+    margin: 0 5px 0 10%;
+    padding: 10px;
+    /* outline: none; */
+    border: 0px;
+    width: auto;
+    background-color: #eee;
+}
+
+
+
+#userlist li .saveBtn {
+    background: rgba(0,0,0,0);
+    border: 0;
+    color: #eee;
+    border-radius: 3px;
+    padding: 3px;;
+    cursor: pointer;
+}
+
+
+#userlist li input:focus +  .saveBtn {
+    background: rgba(0,0,0,.5);
+    color: #ccc;
+}    
+
+
+
+ul li:hover {
+    background: #ddd;
+}
+
+ul li:hover #userlist li .saveBtn {
+    color: red;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.editBtn {
+    float: right;
+    float: right;
+    margin: -12px 10px -12px 0px;
+    padding: 19px 20px 20px 20px;
+    border: 0;
+    font-size: 18px;
+    background-color: transparent;
+}
+ul li .editBtn:hover {
+    background-color: cadetblue;
+ }
+
+ul li .delete {
+    float: right;
+    margin: -12px 0px -12px 0px;
+    padding: 19px 10px 20px 10px;
+    border: 0;
+    font-size: 18px;
+    background-color: transparent;
+}
+ul li .delete:hover {
+   background-color: coral;
+}
+
+
+/* edit todo */
+
+input {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 20%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search {
+    display: inline;
+    margin: 20px 20px 20px 300px;
+    width: 400px;
+}
+select {
+    padding: 10px;
+}
+
+div .save {
+    width: 40%;
+    background-color: cadetblue;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 30%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+div .save:hover {
+    background-color: darkcyan;
+}
+
+@media only screen and (max-width: 1130px) {
+    ul li {
+        padding: 12px 0px 12px 5px;
+    }
+    #userlist li input {
+        margin: 0 5px 0 0;
+    }
+    .editBtn {
+        display: none;
+    }
+    ul li .delete {
+        clear: left;
+    }
+  }
+}
